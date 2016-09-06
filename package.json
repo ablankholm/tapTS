@@ -1,0 +1,16 @@
+{
+  "name": "tap.ts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/tap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ablankholm",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "byots": "2.1.0-dev.20160724.9.14",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.1.0-dev.20160810"
+  }
+}
