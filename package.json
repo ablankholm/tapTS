@@ -11,6 +11,6 @@
   "dependencies": {
     "byots": "2.1.0-dev.20160724.9.14",
     "ts-loader": "^0.8.2",
-    "typescript": "^2.1.0-dev.20160810"
+    "typescript": "^2.1.0-dev.20160724"
   }
 }
