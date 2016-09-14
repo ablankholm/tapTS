@@ -46,9 +46,30 @@
 
 	"use strict";
 	var ts = __webpack_require__(1);
-	var tsString = "var p: int = 1";
+	var tsString = "tokens: ";
+	function syntaxKindToName(kind) {
+	    return ts.SyntaxKind[kind];
+	}
+	exports.syntaxKindToName = syntaxKindToName;
 	document.body.onload = function () {
-	    document.body.innerHTML = tsString + ts.ScriptKind.Unknown;
+	    function printAllChildren(node, depth) {
+	        if (depth === void 0) { depth = 0; }
+	        //console.log(new Array(depth + 1).join('----'), node.kind.toString(), node.pos, node.end);
+	        tsString += new Array(depth + 1).join('----') + syntaxKindToName(node.kind)
+	            + " @ "
+	            + node.pos
+	            + "-"
+	            + node.end
+	            + " --> "
+	            + node.getText()
+	            + "<br>";
+	        depth++;
+	        node.getChildren().forEach(function (c) { return printAllChildren(c, depth); });
+	    }
+	    var sourceCode = "\n    var foo = 123;\n    foo = foo + 789;\n    ".trim();
+	    var sourceFile = ts.createSourceFile('foo.ts', sourceCode, ts.ScriptTarget.ES5, true);
+	    printAllChildren(sourceFile);
+	    document.body.innerHTML = tsString;
 	};
 
 
