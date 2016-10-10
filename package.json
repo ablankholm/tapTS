@@ -1,8 +1,8 @@
 {
-  "name": "elementary-emit.ts",
+  "name": "elem.ts",
   "version": "0.0.1",
   "description": "",
-  "main": "./dist/elementary-emit.js",
+  "main": "./dist/elem.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

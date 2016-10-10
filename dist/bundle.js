@@ -46,7 +46,7 @@
 
 	"use strict";
 	var ts = __webpack_require__(1);
-	var tsString = "tokens: ";
+	var testString = "tokens: ";
 	function syntaxKindToName(kind) {
 	    return ts.SyntaxKind[kind];
 	}
@@ -54,8 +54,7 @@
 	document.body.onload = function () {
 	    function printAllChildren(node, depth) {
 	        if (depth === void 0) { depth = 0; }
-	        //console.log(new Array(depth + 1).join('----'), node.kind.toString(), node.pos, node.end);
-	        tsString += new Array(depth + 1).join('----') + syntaxKindToName(node.kind)
+	        testString += new Array(depth + 1).join('----') + syntaxKindToName(node.kind)
 	            + " @ "
 	            + node.pos
 	            + "-"
@@ -69,7 +68,7 @@
 	    var sourceCode = "\n    var foo = 123;\n    foo = foo + 789;\n    ".trim();
 	    var sourceFile = ts.createSourceFile('foo.ts', sourceCode, ts.ScriptTarget.ES5, true);
 	    printAllChildren(sourceFile);
-	    document.body.innerHTML = tsString;
+	    document.body.innerHTML = testString;
 	};
 
 
