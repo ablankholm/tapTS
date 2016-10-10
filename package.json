@@ -1,8 +1,8 @@
 {
-  "name": "tap.ts",
+  "name": "elementary-emit.ts",
   "version": "0.0.1",
   "description": "",
-  "main": "./dist/tap.js",
+  "main": "./dist/elementary-emit.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

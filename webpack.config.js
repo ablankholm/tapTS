@@ -1,5 +1,5 @@
 module.exports = {  
-  entry: './src/tap.ts',
+  entry: './src/elementary-emit.ts',
   output: {
     filename: './dist/bundle.js'
   },
